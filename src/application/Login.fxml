@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="700.0" prefWidth="900.0" styleClass="background-login" stylesheets="/application/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #fff;">
+         <children>
+            <AnchorPane fx:id="login_form" focusTraversable="true" prefHeight="500.0" prefWidth="350.0">
+               <children>
+                  <FontAwesomeIconView glyphName="USER" layoutX="155.0" layoutY="82.0" size="1em" wrappingWidth="40.0">
+                     <font>
+                        <Font size="55.0" />
+                     </font>
+                  </FontAwesomeIconView>
+                  <Label layoutX="96.0" layoutY="97.0" style="-fx-font-weight: bold;" text="Đăng Nhập">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <TextField fx:id="login_uername" layoutX="28.0" layoutY="190.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#login" prefHeight="32.0" prefWidth="293.0" promptText="Tài khoản" styleClass="textfield" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <PasswordField fx:id="login_password" layoutX="28.0" layoutY="232.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#login" prefHeight="32.0" prefWidth="293.0" promptText="Mật khẩu" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <TextField fx:id="login_showPassword" focusTraversable="false" layoutX="28.0" layoutY="232.0" onAction="#login" prefHeight="32.0" prefWidth="293.0" promptText="Mật khẩu" styleClass="textfield" visible="false" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <CheckBox fx:id="login_selectShowPassword" layoutX="28.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showPassword" text="Hiển thị mật khẩu">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></CheckBox>
+                  <Hyperlink fx:id="login_forgotPassword" alignment="BOTTOM_CENTER" layoutX="225.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchForm" prefHeight="31.0" prefWidth="96.0" text="Quên mật khẩu?" />
+                  <Button fx:id="login_btn" layoutX="29.0" layoutY="338.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="293.0" styleClass="btn-login1" text="Đăng Nhập" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="29.0" layoutY="381.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="293.0" text="---------------------Hoặc---------------------" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Button fx:id="login_createAccount" layoutX="29.0" layoutY="410.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchForm" prefHeight="32.0" prefWidth="293.0" styleClass="btn-login2" text="Chuyển Sang Đăng Ký" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signup_form" focusTraversable="true" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <children>
+                  <FontAwesomeIconView fontSmoothingType="LCD" glyphName="USER_PLUS" layoutX="145.0" layoutY="65.0" selectionFill="BLACK" size="5em" text="" />
+                  <Label layoutX="116.0" layoutY="74.0" prefHeight="45.0" prefWidth="119.0" style="-fx-font-weight: bold;" text="Đăng Ký">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="29.0" layoutY="137.0" spacing="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <TextField fx:id="signup_fullname" onAction="#register" prefHeight="23.0" prefWidth="293.0" promptText="Họ và Tên" styleClass="textfield" />
+                        <TextField fx:id="signup_email" editable="false" onAction="#register" prefHeight="25.0" prefWidth="293.0" promptText="Xác thực email" styleClass="textfield" />
+                        <TextField fx:id="signup_username" onAction="#register" prefHeight="23.0" prefWidth="293.0" promptText="Tài khoản" styleClass="textfield" />
+                        <PasswordField fx:id="signup_password" onAction="#register" prefHeight="25.0" prefWidth="293.0" promptText="Mật khẩu" />
+                        <PasswordField fx:id="signup_confirmPassword" onAction="#register" prefHeight="23.0" prefWidth="293.0" promptText="Nhập lại mật khẩu" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="29.0" layoutY="299.0">
+                     <children>
+                        <HBox fx:id="signup_hBoxCountdown" alignment="CENTER" visible="false">
+                           <children>
+                              <Label focusTraversable="false" text="(" />
+                              <Label fx:id="signup_countDownText" focusTraversable="false" text="60" />
+                              <Label focusTraversable="false" text="s)" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="signup_btn" layoutX="30.0" layoutY="378.0" mnemonicParsing="false" onAction="#register" prefHeight="25.0" prefWidth="293.0" styleClass="btn-login1" text="Đăng Ký" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="30.0" layoutY="411.0" prefHeight="23.0" prefWidth="293.0" text="----------------------------Hoặc--------------------------" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Button fx:id="signup_loginAccount" layoutX="30.0" layoutY="434.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="293.0" styleClass="btn-login2" text="Chuyển Sang Đăng Nhập" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="forgot_form" focusTraversable="true" prefHeight="500.0" prefWidth="350.0" visible="false">
+               <children>
+                  <FontAwesomeIconView glyphName="KEY" layoutX="145.0" layoutY="94.0" size="5em" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="103.0" prefHeight="45.0" prefWidth="293.0" style="-fx-font-weight: bold;" text="Xác Nhận Tài Khoản">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="forgot_email" layoutX="22.0" layoutY="198.0" onAction="#forgotPassword" prefHeight="34.0" prefWidth="293.0" promptText="Nhập email" styleClass="textfield" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <HBox layoutX="24.0" layoutY="242.0" prefHeight="34.0" prefWidth="147.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <Hyperlink fx:id="getOTPHyperLink1" onAction="#GetOTP_Forgot" prefHeight="32.0" prefWidth="95.0" text="Lấy mã OTP" />
+                        <HBox fx:id="signup_hBoxCountdown1" alignment="CENTER" visible="false">
+                           <children>
+                              <Label text="(" />
+                              <Label fx:id="signup_countDownText1" text="60" />
+                              <Label text="s)" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="forgot_OTPText" layoutX="22.0" layoutY="283.0" prefHeight="31.0" prefWidth="297.0" promptText="Nhập mã OTP" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Button fx:id="forgot_bntProceed" layoutX="30.0" layoutY="347.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="32.0" prefWidth="298.0" styleClass="btn-login1" text="Xác nhận" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="forgot_bntBack" cancelButton="true" layoutX="30.0" layoutY="399.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="32.0" prefWidth="297.0" styleClass="btn-login2" text="Trở về" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changePass_form" focusTraversable="true" layoutY="-1.0" prefHeight="500.0" prefWidth="350.0" visible="false">
+               <children>
+                  <FontAwesomeIconView glyphName="KEY" layoutX="145.0" layoutY="110.0" size="5em" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="145.0" />
+                  <PasswordField fx:id="changePass_password" layoutX="29.0" layoutY="220.0" onAction="#changePassword" prefHeight="32.0" prefWidth="293.0" promptText="Mật khẩu mới" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <PasswordField fx:id="changePass_confirmPassword" layoutX="30.0" layoutY="274.0" onAction="#changePassword" prefHeight="32.0" prefWidth="293.0" promptText="Nhập lại mật khẩu mới" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Label alignment="CENTER" layoutX="49.0" layoutY="128.0" text="Thay Đổi Mật Khẩu" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="changePass_btnProceed" layoutX="30.0" layoutY="345.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="32.0" prefWidth="293.0" styleClass="btn-login1" text="Thay Đổi" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="changePass_btnBack" layoutX="30.0" layoutY="390.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="32.0" prefWidth="293.0" styleClass="btn-login2" text="Trở về" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

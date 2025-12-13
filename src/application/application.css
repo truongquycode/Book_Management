@@ -1,0 +1,445 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.white-background{
+	-fx-background-color: #fff;
+}
+.selected {
+	-fx-background-color: #f3f3f3;
+}
+
+.mouse-moved:hover{
+	-fx-background-color: #f3f3f3;
+}
+
+.btn{
+	-fx-font-size: 12px;
+	-fx-text-fill: #fff;
+	-fx-background-color: #000;
+	-fx-font-weight: bold;
+}
+
+.btn:hover{
+	-fx-text-fill: #000;
+	-fx-background-color: transparent;
+	-fx-border-style:  solid;
+	-fx-border-color:  #000;
+	-fx-border-width: 2px;
+}
+
+.btn-login1{
+	-fx-font-size: 12px;
+	-fx-text-fill: #fff;
+	-fx-background-color: #1b1b1b;
+	-fx-font-weight: bold;
+
+}
+
+.btn-login1:hover{
+	-fx-font-size: 12px;
+	-fx-text-fill: #fff;
+	-fx-background-color: #000;
+	-fx-font-weight: bold;
+
+}
+
+
+.btn-login2{
+	-fx-font-size: 12px;
+	-fx-background-color: #fff;
+	-fx-border-style:  solid;
+	-fx-border-color:  #000;
+	-fx-font-weight: bold;
+	-fx-border-width: 2px;
+
+}
+
+.btn-login2:hover{
+	-fx-font-size: 12px;
+	-fx-background-color: #e1e1e1;
+	-fx-border-style:  solid;
+	-fx-font-weight: bold;
+	-fx-border-color:  #000;
+	-fx-border-width: 2px;
+
+}
+
+/* Trạng thái mặc định */
+.toggle-button {
+    -fx-font-size: 12px;
+    -fx-text-fill: #009ACA;
+    -fx-background-color: #fff;
+    -fx-font-weight: bold;
+    -fx-border-color: #009ACA;
+
+}
+
+/* Khi ToggleButton được chọn */
+.toggle-button:selected {
+    -fx-background-color: #009ACA; /* Đổi nền thành xanh */
+    -fx-text-fill: white; /* Chữ thành trắng */
+}
+
+.spinner {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #009ACA;
+    -fx-padding: 2px;
+}
+
+/* Tùy chỉnh ô nhập giá trị */
+.spinner .text-field {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: transparent;
+}
+
+/* Tùy chỉnh nút tăng giảm */
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #009ACA;
+    -fx-text-fill: white;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #0078A8;
+}
+
+/* Tùy chỉnh mũi tên */
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: white;
+}
+
+/* Tùy chỉnh toàn bộ ComboBox */
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #009ACA;
+
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+/* Tùy chỉnh khi ComboBox được nhấn */
+.combo-box:focused {
+    -fx-border-color: #0078A8;
+}
+
+/* Tùy chỉnh mũi tên */
+.combo-box .arrow {
+    -fx-background-color: #009ACA;
+}
+
+/* Tùy chỉnh danh sách thả xuống */
+.combo-box .list-cell {
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+/* Khi di chuột vào mục trong danh sách */
+.combo-box .list-cell:hover {
+    -fx-background-color: #009ACA;
+    -fx-text-fill: white;
+}
+
+/* Khi mục được chọn */
+.combo-box .list-cell:selected {
+    -fx-background-color: #0078A8;
+    -fx-text-fill: white;
+}
+
+/* Tùy chỉnh TextField */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #009ACA;
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+
+}
+
+/* Khi TextField được focus */
+.text-field:focused {
+    -fx-border-color: #0078A8;
+    -fx-background-color: #f0f8ff;
+}
+
+/* Placeholder (chỉ hoạt động nếu TextField rỗng) */
+.text-field:empty {
+    -fx-prompt-text-fill: #888888;
+}
+
+/* Khi TextField bị lỗi (có thể dùng class này trong Java) */
+.text-field.error {
+    -fx-border-color: red;
+    -fx-background-color: #ffe6e6;
+}
+
+/* Đặt màu cho prompt text với độ mờ 50% */
+.text-field {
+    -fx-prompt-text-fill: rgba(0, 0, 0, 0.5);
+}
+
+/* Khi TextField được focus, đảm bảo prompt text vẫn giữ opacity 1 */
+.text-field:focused .prompt-text {
+    -fx-opacity: 1;
+}
+
+
+/* Tùy chỉnh RadioButton */
+.radio-button {
+    -fx-font-size: 13px;
+    -fx-text-fill: #000;
+}
+
+/* Khi RadioButton được hover */
+.radio-button:hover {
+    -fx-text-fill: #009ACA;
+}
+
+/* Khi RadioButton được chọn */
+.radio-button:selected {
+    -fx-text-fill: #3a9cff;
+}
+
+/* Tùy chỉnh vòng tròn của RadioButton */
+.radio-button .radio {
+    -fx-border-color: #3a9cff;
+    -fx-border-radius: 50%;
+    -fx-background-color: white;
+}
+
+/* Khi RadioButton được chọn, vòng tròn bên trong */
+.radio-button:selected .radio {
+    -fx-background-color: #fff;
+}
+
+/* Khi RadioButton bị disable */
+.radio-button:disabled {
+    -fx-opacity: 0.5;
+}
+
+/* Tùy chỉnh CheckBox */
+.check-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 5px;
+}
+
+/* Khi CheckBox được hover */
+.check-box:hover {
+    -fx-text-fill: #009ACA;
+}
+
+/* Khi CheckBox được chọn */
+.check-box:selected {
+    -fx-text-fill: #0078A8;
+}
+
+/* Tùy chỉnh hộp vuông của CheckBox */
+.check-box .box {
+    -fx-border-color: #009ACA;
+    -fx-background-color: white;
+    -fx-padding: 3px;
+}
+
+
+/* Khi CheckBox bị disable */
+.check-box:disabled {
+    -fx-opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+.btn-trangchu {
+	-fx-font-size: 13px;
+	-fx-text-fill: #000;
+	-fx-background-color:  transparent;
+	-fx-font-weight: bold;
+	-fx-border-color:  #009ACA;
+	-fx-border-color: #000;
+	-fx-border-radius: 20px;
+}
+.btn-trangchu:hover {
+	-fx-font-size: 13px;
+	-fx-text-fill: #000;
+	-fx-background-color:  #fff;
+	-fx-font-weight: bold;
+	-fx-border-color:  #009ACA;
+	-fx-border-color: #000;
+	-fx-border-radius: 20px;
+}
+
+
+.background-login {
+    -fx-background-image: url("/images/background/background-login1.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    
+}
+
+.background-header1 {
+    -fx-background-image: url("/images/shopbyseri/Header1_Manga.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    
+}
+
+.background-header2 {
+    -fx-background-image: url("/images/shopbyseri/Header2_Manga.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    
+}
+.banner {
+    -fx-background-image: url("/images/shopbyseri/banner.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    
+}
+
+.button-text-shadow {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-text-shadow .text{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 8, 0.8, 3, 3);
+}
+
+.list-view {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.list-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 10px;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #d1e8ff;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+.list-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+.list-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-view {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0078d7;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: black;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: black;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #d1e8ff;
+}
+
+
+.capnhat {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.capnhat:hover {
+    -fx-background-color: #3a9cff;
+}
+
+.capnhat:pressed {
+    -fx-background-color: #3a9cff;
+
+}
+
+.capnhat:disabled {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #888888;
+}
+
+.btn-mac-dinh {
+	-fx-background-color: #fff;
+	-fx-border-color:  #3a9cff;
+	-fx-text-fill:  #3a9cff;
+	-fx-font-size: 13px;
+	-fx-font-weight: bold;
+	-fx-cursor: hand;
+}
+
+/* Hover state */
+.btn-mac-dinh:hover {
+    -fx-background-color: #e6f3ff; /* nền xanh nhạt khi hover */
+    -fx-border-color: #3a9cff;
+    -fx-text-fill: #007bff; /* đổi màu chữ khi hover nếu muốn */
+}
+
+/* Selected state – dùng cho ToggleButton hoặc Button có pseudo-class "selected" */
+.btn-mac-dinh.selected {
+    -fx-background-color: #3a9cff;
+    -fx-text-fill: white;
+    
+}
+
+
+
+
+
+
+
+
+
