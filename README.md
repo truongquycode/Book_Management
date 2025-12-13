@@ -70,7 +70,7 @@ Hệ thống được tổ chức theo mô hình MVC tiêu chuẩn:
 
 ### 🔐 Tài khoản Quản trị (Admin)
 * **Username:** `admin`
-* **Password:** (Vui lòng kiểm tra trong bảng `Account` của Database hoặc tạo mới qua chức năng đăng ký nếu chưa có).
+* **Password:** admin@1234.
 
 ### 📝 License
-Dự án là Niên luận/Đồ án cơ sở ngành Mạng máy tính & Truyền thông dữ liệu.
+Dự án là Niên luận cơ sở ngành Mạng máy tính & Truyền thông dữ liệu.
