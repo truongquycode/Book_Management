@@ -44,9 +44,9 @@ Hệ thống được tổ chức theo mô hình MVC tiêu chuẩn:
 * **Services:** Các module xử lý riêng biệt cho Google Drive, Email Sender và Chat Service.
 
 ### ⚙️ Hướng dẫn Cài đặt & Chạy
-
+Tải dự án bên Releases về và làm theo hướng dẫn trong file readme
 #### 1. Yêu cầu hệ thống
-* JDK 17 trở lên.
+* JDK 22 trở lên.
 * MySQL Server (XAMPP hoặc MySQL Workbench).
 * RabbitMQ Server (Đã cài đặt và bật Plugin Management).
 * Kết nối Internet (để gọi API Google và Email).
